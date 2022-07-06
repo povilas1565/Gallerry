@@ -1,0 +1,36 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.0.4"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.10"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+dependencies {
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    implementation 'slide:slide:0.2.3'
+    implementation 'io.noties.markwon:image-glide:4.6.2'
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+    implementation 'com.github.pavlospt:litho-glide:1.6'
+    implementation 'slide:slide-jdk14logger:2.0b1'
+    implementation 'slide:slide-stores:2.1'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://repo.clojars.org'
+        name 'Clojars'
+    }
+}
